@@ -1,3 +1,4 @@
+import type { BetterFetchOption } from '@better-fetch/fetch'
 import type { BetterAuthClientPlugin, ClientStore } from 'better-auth'
 import {
   parseSetCookieHeader,
@@ -596,7 +597,7 @@ export function capacitorClient(opts?: CapacitorClientOptions): BetterAuthClient
           },
         },
 
-        async init(url: string, options?: RequestInit & { body?: Record<string, string> }) {
+        async init(url: string, options?: BetterFetchOption & { body?: Record<string, string> }) {
           if (!isNativePlatform()) {
             return { url, options }
           }
