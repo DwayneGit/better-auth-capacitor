@@ -19,7 +19,7 @@ declare module '@better-auth/core' {
   }
 }
 
-export function capacitor(options?: CapacitorOptions | undefined) {
+export function capacitor(options?: CapacitorOptions | undefined): BetterAuthPlugin {
   return {
     id: 'capacitor',
     init: (_ctx) => {
