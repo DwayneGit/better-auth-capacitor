@@ -25,19 +25,23 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.mts",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
     },
     "./client": {
       "types": "./dist/client.d.mts",
-      "import": "./dist/client.mjs"
+      "import": "./dist/client.mjs",
+      "default": "./dist/client.mjs"
     },
     "./plugins": {
       "types": "./dist/plugins/index.d.mts",
-      "import": "./dist/plugins/index.mjs"
+      "import": "./dist/plugins/index.mjs",
+      "default": "./dist/plugins/index.mjs"
     },
     "./native": {
       "types": "./dist/native.d.mts",
-      "import": "./dist/native.mjs"
+      "import": "./dist/native.mjs",
+      "default": "./dist/native.mjs"
     }
   },
   "main": "./dist/index.mjs",
