@@ -19,15 +19,11 @@ declare module '@better-auth/core' {
   }
 }
 
-export function capacitor(options?: CapacitorOptions | undefined) {
+export function capacitor(options?: CapacitorOptions | undefined): BetterAuthPlugin {
   return {
     id: 'capacitor',
     init: (_ctx) => {
-      const trustedOrigins
-        // eslint-disable-next-line node/prefer-global/process
-        = process.env.NODE_ENV === 'development'
-          ? ['capacitor://', 'ionic://']
-          : ['capacitor://', 'ionic://']
+      const trustedOrigins = ['capacitor://', 'ionic://']
 
       return {
         options: {
